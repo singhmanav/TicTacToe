@@ -14,6 +14,12 @@
 		8575BA2223276645002F5B43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8575BA2023276645002F5B43 /* LaunchScreen.storyboard */; };
 		8575BA2D23276646002F5B43 /* TicTacToeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8575BA2C23276646002F5B43 /* TicTacToeAppTests.swift */; };
 		8575BA3823276646002F5B43 /* TicTacToeAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8575BA3723276646002F5B43 /* TicTacToeAppUITests.swift */; };
+		8575BA4623276751002F5B43 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8575BA4523276751002F5B43 /* GameViewController.swift */; };
+		8575BA482327694A002F5B43 /* GameViewController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8575BA472327694A002F5B43 /* GameViewController+CollectionView.swift */; };
+		8575BA4A23276A79002F5B43 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8575BA4923276A79002F5B43 /* Constants.swift */; };
+		8575BA5023276C6F002F5B43 /* GameViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8575BA4F23276C6F002F5B43 /* GameViewCell.swift */; };
+		8575BA52232770AE002F5B43 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8575BA51232770AE002F5B43 /* Utilities.swift */; };
+		8575BA54232772FA002F5B43 /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8575BA53232772FA002F5B43 /* GameManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +53,12 @@
 		8575BA3323276646002F5B43 /* TicTacToeAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TicTacToeAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8575BA3723276646002F5B43 /* TicTacToeAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeAppUITests.swift; sourceTree = "<group>"; };
 		8575BA3923276646002F5B43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8575BA4523276751002F5B43 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		8575BA472327694A002F5B43 /* GameViewController+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameViewController+CollectionView.swift"; sourceTree = "<group>"; };
+		8575BA4923276A79002F5B43 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8575BA4F23276C6F002F5B43 /* GameViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewCell.swift; sourceTree = "<group>"; };
+		8575BA51232770AE002F5B43 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		8575BA53232772FA002F5B43 /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +109,10 @@
 		8575BA1623276644002F5B43 /* TicTacToeApp */ = {
 			isa = PBXGroup;
 			children = (
-				8575BA1723276644002F5B43 /* AppDelegate.swift */,
-				8575BA1923276644002F5B43 /* ViewController.swift */,
-				8575BA1B23276644002F5B43 /* Main.storyboard */,
-				8575BA1E23276645002F5B43 /* Assets.xcassets */,
-				8575BA2023276645002F5B43 /* LaunchScreen.storyboard */,
-				8575BA2323276645002F5B43 /* Info.plist */,
+				8575BA5823277DB1002F5B43 /* Utility */,
+				8575BA5723277DA6002F5B43 /* View */,
+				8575BA5623277D9D002F5B43 /* Resources */,
+				8575BA5523277D8F002F5B43 /* AppDelegate */,
 			);
 			path = TicTacToeApp;
 			sourceTree = "<group>";
@@ -123,6 +133,46 @@
 				8575BA3923276646002F5B43 /* Info.plist */,
 			);
 			path = TicTacToeAppUITests;
+			sourceTree = "<group>";
+		};
+		8575BA5523277D8F002F5B43 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				8575BA1723276644002F5B43 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		8575BA5623277D9D002F5B43 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8575BA1B23276644002F5B43 /* Main.storyboard */,
+				8575BA1E23276645002F5B43 /* Assets.xcassets */,
+				8575BA2023276645002F5B43 /* LaunchScreen.storyboard */,
+				8575BA2323276645002F5B43 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8575BA5723277DA6002F5B43 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8575BA1923276644002F5B43 /* ViewController.swift */,
+				8575BA4523276751002F5B43 /* GameViewController.swift */,
+				8575BA472327694A002F5B43 /* GameViewController+CollectionView.swift */,
+				8575BA4F23276C6F002F5B43 /* GameViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8575BA5823277DB1002F5B43 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				8575BA4923276A79002F5B43 /* Constants.swift */,
+				8575BA51232770AE002F5B43 /* Utilities.swift */,
+				8575BA53232772FA002F5B43 /* GameManager.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,7 +306,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8575BA4A23276A79002F5B43 /* Constants.swift in Sources */,
+				8575BA54232772FA002F5B43 /* GameManager.swift in Sources */,
 				8575BA1A23276644002F5B43 /* ViewController.swift in Sources */,
+				8575BA52232770AE002F5B43 /* Utilities.swift in Sources */,
+				8575BA482327694A002F5B43 /* GameViewController+CollectionView.swift in Sources */,
+				8575BA4623276751002F5B43 /* GameViewController.swift in Sources */,
+				8575BA5023276C6F002F5B43 /* GameViewCell.swift in Sources */,
 				8575BA1823276644002F5B43 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,7 +489,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = TicTacToeApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TicTacToeApp/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -450,7 +506,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = TicTacToeApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TicTacToeApp/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
